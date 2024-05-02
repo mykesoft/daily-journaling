@@ -49,10 +49,10 @@ The goal of this project is to create a web application [Node.js](https://nodejs
 # Planning
 
 ## Logo
-<img src="Assets\IconLogo\noun-journaling-5330031.png" width="220px" alt="Logo: journaling">
+<img src="https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/IconLogo/noun-journaling-5330031.png" width="320px" alt="Logo: journaling">
 
 ## Home page miniature
-![Home page miniature](Assets\IconLogo\White_Logo_DailyJournaling.png?raw=true "Title")
+![Home page miniature](https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/IconLogo/White_Logo_DailyJournaling.png "Title")
 
 These are the following paths and wireframes.
 
@@ -60,37 +60,37 @@ These are the following paths and wireframes.
 
 Contains 2 buttons: "**Write daily page**" and "**See your history**"
 
-![Screenshot](Assets\Wireframes\Home.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/Wireframes/Home.png?raw=true "Title")
 
 ## /daily-page
 
 It is made up by the current day on the top-right and a **text box** where to write.
 
-![Screenshot](Assets\Wireframes\DailyPage.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/Wireframes/DailyPage.png?raw=true "Title")
 
 ## /history
 
 Preview **all journaling pages** with pagination.
 
-![Screenshot](Assets\Wireframes\History.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/Wireframes/History.png?raw=true "Title")
 
 ## /page?id=ID
 
 Preview the selected Page inside text box (if page isn't today, the write option is disabled).
 
-![Screenshot](Assets\Wireframes\PageId.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/Wireframes/PageId.png?raw=true "Title")
  
 ## /search
 
 It opens when a search is made.
 
-![Screenshot](Assets\Wireframes\Search.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/Wireframes/Search.png?raw=true "Title")
 
 ## /about
 
 Somthing about the usefulness of this website.
 
-![Screenshot](Assets\Wireframes\About.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/master/Assets/Wireframes/About.png?raw=true "Title")
 
 
 # Future implementations
