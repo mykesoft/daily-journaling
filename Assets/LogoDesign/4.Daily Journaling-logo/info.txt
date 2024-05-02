@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Linden Hill
+font link: https://fonts.google.com/specimen/Linden+Hill
+font author: Barry Schwartz
+font author site: http://crudfactory.com/
+
+
+icon designer: Cassandra Bachman
+icon designer link: /crosedesign
+        
+{"bg":"transparent","icon-gradient-0":"#01695A","icon-gradient-1":"#2CC26F","font":"#000000","slogan":"#141414"}
+      
