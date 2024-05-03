@@ -1,0 +1,17 @@
+<%- include('./partials/head') %>
+
+<body>
+	<%- include('./partials/navbar') %>
+
+	Hobbies of <%=data.name%> are:<br /> 
+
+	<ul> 
+		<% data.hobbies.forEach((item)=>{%> 
+			<li> 
+				<%=item%> 
+			</li> 
+		<%});%> 
+	</ul>
+</body>
+
+<%- include('./partials/footer') %>
