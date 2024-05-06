@@ -1,0 +1,20 @@
+body {
+    background: url('../bg-aaron-burden-unsplash.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+.btn-orange {
+    background-color: #ffe484dd;
+    border-color: #fad66bdf;
+}
+
+.bg-orange {
+   background-color: #ffe484dd;
+}
+
+.no-link-underline {
+    text-decoration: none !important;
+}

@@ -1,17 +1,35 @@
 <%- include('./partials/head') %>
 
-<body>
-	<%- include('./partials/navbar') %>
+	<body>
+		<%- include('./partials/navbar') %>
 
-	Hobbies of <%=data.name%> are:<br /> 
+			<div class="mt-5 mx-5">
+				<div class="row">
+					<div class="col"></div>
+					<div class="col-auto mx-4">
+						<!-- Two buttons aligned to the right -->
+						<div class="row mt-5">
+							<button class="btn btn-orange mt-4 pt-3">
+								<a href="/daily-page" class="text-dark no-link-underline">
+									<h5>Write daily page</h5>
+								</a>
+							</button>
+							<button class="btn btn-orange mt-4 pt-3">
+								<a href="/history" class="text-dark no-link-underline">
+									<h5>See history</h5>
+								</a>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-	<ul> 
-		<% data.hobbies.forEach((item)=>{%> 
-			<li> 
-				<%=item%> 
-			</li> 
-		<%});%> 
-	</ul>
-</body>
+			<div class="fixed-bottom mb-5">
+				<div class="d-flex flex-wrap justify-content-between">
+					<p class="text-muted mx-5 my-5">&copy; Photo of Aaron Burden on Unsplash</p>
+					<br><br>
+				</div>
+			</div>
+	</body>
 
-<%- include('./partials/footer') %>
+	<%- include('./partials/footer') %>

@@ -92,6 +92,14 @@ Somthing about the usefulness of this website.
 
 ![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/assets/wireframes/about.png?raw=true "Title")
 
+# Implementing features
+## /home
+
+Desktop:
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screenshot.png?raw=true "Title")
+
+Mobile:
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screnshoot_mobile.png?raw=true "Title")
 
 # Future implementations
 
