@@ -99,7 +99,8 @@ Desktop:
 ![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screenshot.png?raw=true "Title")
 
 Mobile:
-![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screnshoot_mobile.png?raw=true "Title")
+<br>
+<img  src="https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screnshoot_mobile.png?raw=true"  alt="Image" width="420px">
 
 # Future implementations
 
