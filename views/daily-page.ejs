@@ -1,25 +1,57 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>Home Page</title> 
-	<style type="text/css" media="screen"> 
-		body { 
-			background-color: skyblue; 
-			text-decoration-color: white; 
-			font-size: 5em; 
-		}
-	</style> 
-</head> 
+<%- include('./partials/head') %>
 
-<body> 
-	Hobbies of <%=data.name%> are:<br /> 
+	<body>
+		<%- include('./partials/navbar') %>
 
-		<ul> 
-			<% data.hobbies.forEach((item)=>{%> 
-				<li> 
-					<%=item%> 
-				</li> 
-				<%});%> 
-		</ul> 
-</body> 
-</html>
+			<!-- Page Content -->
+			<div class="container">
+				<div class="row mt-5 justify-content-between">
+					<div class="col">
+						<div class="card card-bg-orange">
+							<p class="linden-hill-italic"
+								style="font-size: 32px; text-align: center; margin-top: 14px; color: white;">
+								“If you start doing beautiful things, you will be happy in every circumstance.”
+							</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="card linden-hill">
+							<p style="font-size: 24px; text-align: center; margin: 21px 0px">
+								<%=data.date%> 📅
+							</p>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="card border-0 shadow mb-5" style="background-color: #00000010;">
+					<form id="messageForm" class="form-inline" action="/submit" method="post">
+						<textarea name="message" id="message" class="card-body p-5 form-control linden-hill"
+							style="font-size: 24px;" rows="9" placeholder="Type here about your day!
+
+
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sem sapien, scelerisque non ultricies nec, tempor vitae tortor. Ut porta arcu nec hendrerit convallis. Fusce sollicitudin metus ligula, vel condimentum est bibendum ac. Fusce ligula dui, rutrum ut fringilla congue, facilisis porttitor odio. Cras cursus auctor nibh. Proin condimentum luctus sapien, et semper felis laoreet sed. Aenean blandit, enim at hendrerit pharetra, leo turpis ultricies quam, et pellentesque tellus justo sed leo. Duis ultrices lorem ut magna placerat gravida. Fusce vitae mauris ac eros porta commodo vel vitae nisl.
+
+						Duis fringilla metus lorem. Nam ut urna quis neque pulvinar mollis at ac mauris. Mauris molestie maximus ultrices. Vestibulum eget condimentum mauris. Nam non consequat ex. Nulla imperdiet lacus vitae est pulvinar, ac pellentesque massa maximus. Vestibulum non eros risus. Aliquam vestibulum bibendum ante in luctus. Etiam volutpat ipsum sed mauris rhoncus lacinia. Pellentesque efficitur nisi neque, nec iaculis sapien iaculis vitae. Mauris volutpat est rhoncus commodo bibendum.
+						
+						Integer in ipsum ligula. Phasellus fringilla elit sed enim dignissim auctor. Sed vitae magna enim. Nunc ultricies gravida iaculis. Integer aliquam viverra ex, id rutrum ex laoreet nec. Morbi et suscipit massa. Donec non tortor bibendum, convallis neque ut, ultrices felis. Aliquam eget tristique metus. Mauris cursus justo eu metus efficitur lacinia.
+						
+						Sed vitae felis in magna molestie pharetra. Sed eget lorem ante. Etiam nibh metus, egestas et tortor quis, bibendum ornare lectus. Suspendisse fermentum dui at tincidunt sodales. Pellentesque vitae orci fermentum, convallis elit vitae, ultrices magna. Aenean non urna ipsum. Curabitur aliquam metus magna, a scelerisque tellus dignissim nec.
+						
+						Nullam scelerisque molestie elementum. Suspendisse auctor rhoncus purus et bibendum. Duis libero tortor, suscipit non nunc rhoncus, egestas pellentesque justo. Phasellus imperdiet vestibulum ligula. Vivamus in libero nec tellus volutpat pellentesque. Aliquam vel ex nec est interdum dapibus at at velit. Cras non rutrum neque, a fermentum leo. Etiam sit amet bibendum quam.Quisque elementum nunc et augue placerat tristique.Curabitur at pulvinar arcu, sit amet vehicula diam. Pellentesque efficitur feugiat tellus.
+						Id porttitor ligula euismod vitae."><%= message %></textarea>
+					</form>
+				</div>
+			</div>
+	</body>
+
+	<%- include('./partials/footer') %>
+
+		<script>
+			const textarea = document.getElementById('message');
+			const form = document.getElementById('messageForm');
+
+			textarea.addEventListener('input', function () {
+				// Trigger form submission when the user types in the textarea
+				form.submit();
+			});
+		</script>

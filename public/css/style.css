@@ -1,20 +1,62 @@
+@font-face {
+  font-family: LindenHill;
+  src: url("../fonts/LindenHill-Regular.ttf") format("truetype");
+}
+
+.linden-hill {
+  font-family: LindenHill, sans-serif; /* Use fallback fonts in case the custom font fails to load */
+}
+
+@font-face {
+  font-family: LindenHill-Italic;
+  src: url("../fonts/LindenHill-Italic.ttf") format("truetype");
+}
+
+.linden-hill-italic {
+  font-family: LindenHill-Italic, sans-serif; /* Use fallback fonts in case the custom font fails to load */
+}
+
+.nav-item {
+  padding: 4px;
+  font-size: 30px;
+  font-family: LindenHill, sans-serif; /* Use fallback fonts in case the custom font fails to load */
+}
+
+.footer-nav-item {
+  padding: 0px 4px;
+  font-size: 20px;
+  font-family: LindenHill, sans-serif; /* Use fallback fonts in case the custom font fails to load */
+}
+
 body {
-    background: url('../bg-aaron-burden-unsplash.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }
+  background: url("../bg-aaron-burden-unsplash.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 
 .btn-orange {
-    background-color: #ffe484dd;
-    border-color: #fad66bdf;
+  background-color: #ffe484dd;
+  border-color: #fad66bdf;
 }
 
 .bg-orange {
-   background-color: #ffe484dd;
+  background-color: #ffe484dd;
+}
+
+.card-bg-orange {
+  background-color: #ffe48490;
 }
 
 .no-link-underline {
-    text-decoration: none !important;
+  text-decoration: none !important;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

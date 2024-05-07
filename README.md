@@ -100,7 +100,17 @@ Desktop:
 
 Mobile:
 <br>
-<img  src="https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screnshoot_mobile.png?raw=true"  alt="Image" width="420px">
+<img  src="https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screenshot_mobile.png?raw=true"  alt="Image" width="420px">
+
+## /daily-page
+
+Desktop:
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Daily-page_screenshot.png?raw=true "Title")
+
+Mobile:
+<br>
+<img  src="https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Daily-page_screenshot_mobile.png?raw=true"  alt="Image" width="420px">
+
 
 # Future implementations
 
