@@ -54,11 +54,39 @@
 	<%- include('./partials/footer') %>
 
 		<script>
+			// Form is submitted typing a keystroke, with a fixed delay to prevent infinite loops
+
+			// Throttle function to limit how often we can call a function
+			function throttle(func, limit) {
+			let lastFunc;
+			let lastRan;
+			return function() {
+				const context = this;
+				const args = arguments;
+				if (!lastRan) {
+				func.apply(context, args);
+				lastRan = Date.now();
+				} else {
+				clearTimeout(lastFunc);
+				lastFunc = setTimeout(function() {
+					if ((Date.now() - lastRan) >= limit) {
+					func.apply(context, args);
+					lastRan = Date.now();
+					}
+				}, limit - (Date.now() - lastRan));
+				}
+			}
+			}
+
+			// Get the textarea and form elements by their IDs
 			const textarea = document.getElementById('message');
 			const form = document.getElementById('messageForm');
 
-			textarea.addEventListener('input', function () {
-				// Trigger form submission when the user types in the textarea
-				form.submit();
-			});
+			// Throttled form submission function
+			const throttledFormSubmit = throttle(function() {
+			form.submit();
+			}, 2000); // Only allow form submission once every 2000 milliseconds (2 seconds)
+
+			// Add the throttled function to the textarea input event
+			textarea.addEventListener('input', throttledFormSubmit);
 		</script>
