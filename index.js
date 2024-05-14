@@ -109,6 +109,30 @@ async function upsertRow(pageContent) {
   }
 }
 
+// Function to get messages with pagination
+async function getMessages(page, limit) {
+  const offset = (page - 1) * limit;
+  const client = await pool.connect();
+  try {
+    const result = await client.query(`
+      SELECT TO_CHAR(publication_date, 'FMDay, DD FMMonth YYYY') AS formatted_date, content
+      FROM messages
+      ORDER BY publication_date DESC
+      LIMIT $1 OFFSET $2
+    `, [limit, offset]);
+    const countResult = await client.query(`SELECT COUNT(*) FROM messages`);
+    const totalMessages = parseInt(countResult.rows[0].count, 10);
+    return {
+      messages: result.rows,
+      totalMessages
+    };
+  } catch (error) {
+    console.error("Error upserting row:", error);
+  } finally {
+    client.release();
+  }
+}
+
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(bodyParser.urlencoded({ extended: true }));
 // Parse JSON bodies (as sent by API clients)
@@ -156,22 +180,18 @@ app.post("/daily-page", async (req, res) => {
   res.status(204).send();
 });
 
-app.get("/history", (req, res) => {
-  let data = {
-    name: "Akashdeep",
-    hobbies: ["playing football", "playing chess", "cycling"],
-  };
-
-  res.render("history", { data: data });
-});
-
-app.get("/page", (req, res) => {
-  let data = {
-    name: "Akashdeep",
-    hobbies: ["playing football", "playing chess", "cycling"],
-  };
-
-  res.render("page", { data: data });
+app.get("/history", async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = 5;
+  try {
+    const { messages, totalMessages } = await getMessages(page, limit);
+    const totalPages = Math.ceil(totalMessages / limit);
+    // Pass data to the EJS template
+    res.render('history', { messages, page, totalPages });
+  } catch (error) {
+    console.error('Error retrieving messages:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get("/search", (req, res) => {
@@ -184,12 +204,7 @@ app.get("/search", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  let data = {
-    name: "Akashdeep",
-    hobbies: ["playing football", "playing chess", "cycling"],
-  };
-
-  res.render("about", { data: data });
+  res.render("about");
 });
 
 const server = app.listen(4000, function () {

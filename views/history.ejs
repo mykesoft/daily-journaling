@@ -1,25 +1,69 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>Home Page</title> 
-	<style type="text/css" media="screen"> 
-		body { 
-			background-color: skyblue; 
-			text-decoration-color: white; 
-			font-size: 5em; 
-		}
-	</style> 
-</head> 
+<%- include('./partials/head') %>
 
-<body> 
-	Hobbies of <%=data.name%> are:<br /> 
+	<body>
+		<%- include('./partials/navbar') %>
 
-		<ul> 
-			<% data.hobbies.forEach((item)=>{%> 
-				<li> 
-					<%=item%> 
-				</li> 
-				<%});%> 
-		</ul> 
-</body> 
-</html>
+			<!-- Page Content -->
+			<div class="container">
+				<div class="row mt-5 justify-content-between">
+					<div class="col-2">
+						<div class="card linden-hill px-5">
+							<p style="font-size: 32px; margin: 16px 0px 14px">
+								History
+							</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card-bg-orange">
+							<p class="linden-hill-italic"
+								style="font-size: 32px; text-align: center; margin-top: 14px; color: white;">
+								“If you start doing beautiful things, you will be happy in every circumstance.”
+							</p>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="container mt-2">
+					<% messages.forEach(message=> { %>
+							<div class="card mb-2 linden-hill">
+								<div class="content p-5">
+									<span class="mb-2" style="font-size: 28px;">
+										<%= message.formatted_date %>
+									</span>
+									<br><br>
+									<span style="font-size: 24px;"><%= message.content %></span>
+								</div>
+							</div>
+						<br>
+						<% }); %>
+
+				<!-- Pagination -->
+				<nav aria-label="Page navigation">
+					<ul class="pagination justify-content-center mt-4 text-light">
+						<% if (page> 1) { %>
+							<li class="page-item">
+								<a class="page-link" href="/history?page=<%= page - 1 %>">Previous</a>
+							</li>
+							<% } %>
+								<% for (let i=1; i <=totalPages; i++) { %>
+									<li class="page-item <%= page === i ? 'active' : '' %>">
+										<a class="page-link" href="/history?page=<%= i %>">
+											<%= i %>
+										</a>
+									</li>
+									<% } %>
+										<% if (page < totalPages) { %>
+											<li class="page-item">
+												<a class="page-link" href="/history?page=<%= page + 1 %>">Next</a>
+											</li>
+											<% } %>
+					</ul>
+				</nav>
+			</div>
+
+			<br><br><br>
+	</body>
+
+	<%- include('./partials/footer') %>

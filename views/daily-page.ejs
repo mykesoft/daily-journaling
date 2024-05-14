@@ -6,18 +6,18 @@
 			<!-- Page Content -->
 			<div class="container">
 				<div class="row mt-5 justify-content-between">
+					<div class="col-4">
+						<div class="card linden-hill px-5">
+							<p style="font-size: 32px; margin: 16px 0px 14px">
+								<%=data.date%>
+							</p>
+						</div>
+					</div>
 					<div class="col">
 						<div class="card card-bg-orange">
 							<p class="linden-hill-italic"
 								style="font-size: 32px; text-align: center; margin-top: 14px; color: white;">
 								“If you start doing beautiful things, you will be happy in every circumstance.”
-							</p>
-						</div>
-					</div>
-					<div class="col-3">
-						<div class="card linden-hill">
-							<p style="font-size: 24px; text-align: center; margin: 21px 0px">
-								<%=data.date%> 📅
 							</p>
 						</div>
 					</div>
@@ -54,7 +54,7 @@
 	<%- include('./partials/footer') %>
 
 		<script>
-			// Form is submitted typing a keystroke, with a fixed delay to prevent infinite loops
+			// 
 
 			// Throttle function to limit how often we can call a function
 			function throttle(func, limit) {
@@ -85,7 +85,7 @@
 			// Throttled form submission function
 			const throttledFormSubmit = throttle(function() {
 			form.submit();
-			}, 2000); // Only allow form submission once every 2000 milliseconds (2 seconds)
+			}, 20000); // Only allow form submission once every 20000 milliseconds (20 seconds)
 
 			// Add the throttled function to the textarea input event
 			textarea.addEventListener('input', throttledFormSubmit);

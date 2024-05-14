@@ -42,8 +42,13 @@ body {
   border-color: #fad66bdf;
 }
 
+.btn-orange:hover {
+  background-color: lightgoldenrodyellow; /* Hover background color */
+}
+
 .bg-orange {
-  background-color: #ffe484dd;
+  background-color: #ffe484;
+  z-index: 5;
 }
 
 .card-bg-orange {
@@ -52,6 +57,27 @@ body {
 
 .no-link-underline {
   text-decoration: none !important;
+}
+
+/* Custom background color for active (selected) page link */
+.pagination .page-item.active .page-link {
+  background-color: lightgoldenrodyellow;
+  border-color: #fad66bdf;
+  color: black; /* Text color for better contrast */
+}
+
+/* Custom background color for non-active (unselected) page link */
+.pagination .page-item .page-link {
+  background-color: #ffe484dd;
+  border-color: #fad66bdf;
+  color: black; /* Text color for better contrast */
+}
+
+/* Optional: Change background color on hover */
+.pagination .page-item .page-link:hover {
+  background-color: lightgoldenrodyellow; /* Hover background color */
+  border-color: lightgray; /* Match border color if needed */
+  color: black; /* Hover text color */
 }
 
 footer {

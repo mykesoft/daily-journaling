@@ -1,25 +1,101 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>Home Page</title> 
-	<style type="text/css" media="screen"> 
-		body { 
-			background-color: skyblue; 
-			text-decoration-color: white; 
-			font-size: 5em; 
-		}
-	</style> 
-</head> 
+<%- include('./partials/head') %>
 
-<body> 
-	Hobbies of <%=data.name%> are:<br /> 
+	<body>
+		<%- include('./partials/navbar') %>
 
-		<ul> 
-			<% data.hobbies.forEach((item)=>{%> 
-				<li> 
-					<%=item%> 
-				</li> 
-				<%});%> 
-		</ul> 
-</body> 
-</html>
+			<!-- Page Content -->
+			<div class="container">
+				<div class="row mt-5 justify-content-between">
+					<div class="col-2">
+						<div class="card linden-hill px-5">
+							<p style="font-size: 32px; margin: 16px 0px 14px">
+								About
+							</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card-bg-orange">
+							<p class="linden-hill-italic"
+								style="font-size: 32px; text-align: center; margin-top: 14px; color: white;">
+								“If you start doing beautiful things, you will be happy in every circumstance.”
+							</p>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="container mt-2">
+				<div class="card mb-2 linden-hill">
+					<div class="content p-5">
+						<span class="mb-2" style="font-size: 28px;">
+							Here is a list of the benefits of journaling:
+						</span>
+						<br><br>
+						<ul style="font-size: 22px;">
+							<li><strong>Improves Mental Clarity</strong>: Helps organize thoughts and clear the
+								mind.</li>
+							<li><strong>Enhances Emotional Health</strong>: Provides an outlet for expressing
+								feelings, which can reduce stress and anxiety.</li>
+							<li><strong>Boosts Memory and Comprehension</strong>: Writing about experiences helps
+								reinforce memory and understanding.</li>
+							<li><strong>Encourages Self-Reflection</strong>: Promotes deeper understanding of
+								oneself and personal growth.</li>
+							<li><strong>Permits to set a plan to change</strong>: Helps to understand how you are and
+								who
+								you want to be. It helps to change transform in the best version of you.</li>
+							<li><strong>Aids in Goal Setting</strong>: Helps in setting, tracking, and achieving
+								personal and professional goals.</li>
+							<li><strong>Improves Writing Skills</strong>: Regular practice enhances writing and
+								communication abilities.</li>
+							<li><strong>Increases Creativity</strong>: Encourages creative thinking and
+								problem-solving.</li>
+							<li><strong>Strengthens Self-Discipline</strong>: Establishing a routine can improve
+								self-discipline and time management.</li>
+							<li><strong>Promotes Mindfulness</strong>: Focuses attention on the present moment,
+								increasing awareness.</li>
+							<li><strong>Facilitates Healing</strong>: Writing about traumatic or stressful events
+								can help process emotions and heal.</li>
+							<li><strong>Tracks Personal Growth</strong>: Allows for reflection on progress and
+								changes over time.</li>
+							<li><strong>Enhances Problem-Solving Skills</strong>: Writing about problems can lead to
+								new insights and solutions.</li>
+							<li><strong>Improves Mental Health</strong>: Can reduce symptoms of depression and
+								improve overall mental well-being.</li>
+							<li><strong>Encourages Gratitude</strong>: Keeping a gratitude journal can increase
+								positivity and satisfaction with life.</li>
+							<li><strong>Provides a Record of Life Events</strong>: Acts as a personal history,
+								documenting life’s journey and significant moments.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row mt-5 justify-content-between">
+					<div class="col-3">
+						<div class="card linden-hill px-5">
+							<p style="font-size: 32px; margin: 16px 0px 14px">
+								Remeber that:
+							</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card-bg-orange">
+							<p class="linden-hill-italic"
+								style="font-size: 32px; text-align: center; margin-top: 14px; color: white;">
+								“There is more happiness in giving than in receiving.”
+							</p>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			</div>
+
+
+
+
+			<br><br><br>
+	</body>
+
+	<%- include('./partials/footer') %>

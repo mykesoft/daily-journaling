@@ -73,12 +73,6 @@ It is made up by the current day on the top-right and a **text box** where to wr
 Preview **all journaling pages** with pagination.
 
 ![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/assets/wireframes/history.png?raw=true "Title")
-
-## /page?id=ID
-
-Preview the selected Page inside text box (if page isn't today, the write option is disabled).
-
-![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/assets/wireframes/page-id.png?raw=true "Title")
  
 ## /search
 
