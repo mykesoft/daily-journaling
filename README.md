@@ -1,6 +1,6 @@
 # Welcome to Daily Journaling!
 
-The goal of this project is to create a web application [Node.js](https://nodejs.org/en), [Express.js](https://expressjs.com/), [node-postgres package](https://www.npmjs.com/package/pg), [EJS](https://ejs.co/) and [Bootstrap](https://getbootstrap.com/) for styling. The application will allow users to create and view Daily journaling pages. Posts will persist between sessions as a postreSQL database will be used in this version of the application.
+The goal of this project is to create a web application [Node.js](https://nodejs.org/en), [Express.js](https://expressjs.com/), [node-postgres package](https://www.npmjs.com/package/pg), [EJS](https://ejs.co/) and [Bootstrap](https://getbootstrap.com/) for styling. The application will allow users to create and view Daily journaling pages. Posts will persist between sessions as a postgreSQL database will be used in this version of the application.
 
 
 # Features
