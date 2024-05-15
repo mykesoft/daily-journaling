@@ -105,7 +105,7 @@ Desktop:
 ![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Search_screenshot.png?raw=true "Title")
 
 ## /about
-![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/About_screenshots.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/About_screenshot.png?raw=true "Title")
 
 
 # Future implementations
