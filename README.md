@@ -89,21 +89,23 @@ Somthing about the usefulness of this website.
 # Implementing features
 ## /home
 
-Desktop:
 ![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screenshot.png?raw=true "Title")
-
-Mobile:
-<br>
-<img  src="https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Home_screenshot_mobile.png?raw=true"  alt="Image" width="420px">
 
 ## /daily-page
 
 Desktop:
-![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Daily-page_screenshot.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/DailyPage_screenshot.png?raw=true "Title")
 
-Mobile:
-<br>
-<img  src="https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Daily-page_screenshot_mobile.png?raw=true"  alt="Image" width="420px">
+## /history
+
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/History_screenshot.png?raw=true "Title")
+ 
+## /search
+
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/Search_screenshot.png?raw=true "Title")
+
+## /about
+![Screenshot](https://raw.githubusercontent.com/mykesoft/daily-journaling/main/screenshots/About_screenshots.png?raw=true "Title")
 
 
 # Future implementations

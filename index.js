@@ -133,6 +133,44 @@ async function getMessages(page, limit) {
   }
 }
 
+// Function to get messages with pagination and search
+async function getMessagesFromSearch(page, limit, search) {
+  const offset = (page - 1) * limit;
+  const client = await pool.connect();
+  try {
+    const searchQuery = search ? `%${search}%` : '%';
+    const result = await client.query(`
+      SELECT 
+        TO_CHAR(publication_date, 'FMDay, DD FMMonth YYYY') AS formatted_date, 
+        content 
+      FROM 
+        messages 
+      WHERE 
+        content ILIKE $1 OR TO_CHAR(publication_date, 'FMDay, DD FMMonth YYYY') ILIKE $1
+      ORDER BY 
+        publication_date DESC 
+      LIMIT $2 OFFSET $3
+    `, [searchQuery, limit, offset]);
+
+    const countResult = await client.query(`
+      SELECT COUNT(*) 
+      FROM messages 
+      WHERE 
+        content ILIKE $1 OR TO_CHAR(publication_date, 'FMDay, DD FMMonth YYYY') ILIKE $1
+    `, [searchQuery]);
+
+    const totalMessages = parseInt(countResult.rows[0].count, 10);
+    return {
+      messages: result.rows,
+      totalMessages
+    };
+  } catch (error) {
+    console.error("Error upserting row:", error);
+  } finally {
+    client.release();
+  }
+}
+
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(bodyParser.urlencoded({ extended: true }));
 // Parse JSON bodies (as sent by API clients)
@@ -194,13 +232,18 @@ app.get("/history", async (req, res) => {
   }
 });
 
-app.get("/search", (req, res) => {
-  let data = {
-    name: "Akashdeep",
-    hobbies: ["playing football", "playing chess", "cycling"],
-  };
-
-  res.render("search", { data: data });
+app.get("/search", async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = 5;
+  const search = req.query.search || '';
+  try {
+    const { messages, totalMessages } = await getMessagesFromSearch(page, limit, search);
+    const totalPages = Math.ceil(totalMessages / limit);
+    res.render('search', { messages, page, totalPages, search });
+  } catch (error) {
+    console.error('Error retrieving messages:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get("/about", (req, res) => {
